@@ -55,7 +55,9 @@ class _SpecialCharState extends State<SpecialChar> {
 
     var newValue = _searchInputControllor.value.copyWith(
       text: newText,
-      selection: TextSelection.collapsed(offset: newText.length),
+      selection: TextSelection.collapsed(
+        offset: newText.length,
+      ),
       composing: TextRange.empty,
     );
 
