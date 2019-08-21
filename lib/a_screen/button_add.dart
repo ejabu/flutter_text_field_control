@@ -1,5 +1,37 @@
 import 'package:flutter/material.dart';
 
+class ButtonAddScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Control Text"),
+      ),
+      body: Center(
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          children: <Widget>[
+            Container(
+              width: MediaQuery.of(context).size.width,
+              child: Column(
+                children: <Widget>[
+                  SearchBar(),
+                  SpecialChar(
+                    btnVal: "ack",
+                  ),
+                  SpecialChar(
+                    btnVal: "erflow",
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 //I have this as a global variable
 TextEditingController _searchInputControllor = TextEditingController();
 
