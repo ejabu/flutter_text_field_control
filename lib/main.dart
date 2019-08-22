@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'a_screen/button_add.dart';
 import 'b_screen/auto_call_api.dart';
+import 'c_screen/clear_text.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,7 +22,7 @@ class BaseScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Tricky Layouts'),
+        title: Text('Text Field Control'),
       ),
       body: Center(
         child: Row(
@@ -43,6 +44,13 @@ class BaseScreen extends StatelessWidget {
                     title: "A-2. Auto Call API",
                     subtitle: "By listening to certain characters",
                     child: AutoCallApi(),
+                  ),
+                  
+                  Dividers(),
+                  ScreenButton(
+                    title: "A-3. Clear Text Field",
+                    subtitle: "No double call to API",
+                    child: ClearTextScreen(),
                   ),
                   
                   Dividers(),
